@@ -88,6 +88,33 @@ namespace _1DV402.S2.L3C {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mantelarea.
+        /// </summary>
+        internal static string MantelArea {
+            get {
+                return ResourceManager.GetString("MantelArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Begränsningsarea.
+        /// </summary>
+        internal static string TotalSurFaceArea {
+            get {
+                return ResourceManager.GetString("TotalSurFaceArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to volym.
+        /// </summary>
+        internal static string Volume {
+            get {
+                return ResourceManager.GetString("Volume", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bredd.
         /// </summary>
         internal static string Width {

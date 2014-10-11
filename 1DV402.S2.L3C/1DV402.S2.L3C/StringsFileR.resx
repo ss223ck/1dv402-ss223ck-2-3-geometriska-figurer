@@ -126,6 +126,15 @@
   <data name="Length" xml:space="preserve">
     <value>Längd</value>
   </data>
+  <data name="MantelArea" xml:space="preserve">
+    <value>Mantelarea</value>
+  </data>
+  <data name="TotalSurFaceArea" xml:space="preserve">
+    <value>Begränsningsarea</value>
+  </data>
+  <data name="Volume" xml:space="preserve">
+    <value>volym</value>
+  </data>
   <data name="Width" xml:space="preserve">
     <value>Bredd</value>
   </data>

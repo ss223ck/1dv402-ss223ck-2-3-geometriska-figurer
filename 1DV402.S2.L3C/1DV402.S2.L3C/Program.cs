@@ -8,6 +8,10 @@ namespace _1DV402.S2.L3C
 {
     class Program
     {
+        private static Shape CreateShape(ShapeType shapeType)
+        {
+
+        }
         static void Main(string[] args)
         {
         }

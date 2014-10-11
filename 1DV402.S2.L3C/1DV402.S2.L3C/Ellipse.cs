@@ -18,12 +18,8 @@ namespace _1DV402.S2.L3C
         }
         //Speciallfallet Ellipse = cirkel
         public Ellipse(double diameter) : base(ShapeType.Ellipse, diameter, diameter)
-        {
-
-        }
-        public Ellipse(double hDiameter, double vDiameter) : base(ShapeType.Ellipse, hDiameter, vDiameter)
-        {
-
-        }
+        {}
+        public Ellipse(double hDiameter, double vDiameter) : base(ShapeType.Circle, hDiameter, vDiameter)
+        {}
     }
 }
