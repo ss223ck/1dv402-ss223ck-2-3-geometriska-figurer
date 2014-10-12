@@ -129,10 +129,25 @@
   <data name="Ellipse_Prompt" xml:space="preserve">
     <value>3. Ellipse.</value>
   </data>
+  <data name="FrameMinus" xml:space="preserve">
+    <value>-------------------------------------------------------------------</value>
+  </data>
+  <data name="FrameMinusTwo" xml:space="preserve">
+    <value>------------------------------------</value>
+  </data>
+  <data name="FrameSpecifiedTwo" xml:space="preserve">
+    <value>Figur      Längd Bredd  Höjd   Mantelarea Begräns.area        Volym</value>
+  </data>
   <data name="FramOfEquals" xml:space="preserve">
     <value>=====================================</value>
   </data>
-  <data name="MiddleFramOfEquals" xml:space="preserve">
+  <data name="FramSpecifiedOne" xml:space="preserve">
+    <value>Figur      Längd Bredd  Höjd    Area</value>
+  </data>
+  <data name="MiddleFrameDetails" xml:space="preserve">
+    <value>=              Detaljer             =</value>
+  </data>
+  <data name="MiddleFrameGeometriska" xml:space="preserve">
     <value>=         Geometriska figurer       =</value>
   </data>
   <data name="OnlyEquals" xml:space="preserve">

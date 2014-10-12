@@ -35,11 +35,15 @@ namespace _1DV402.S2.L3C
             {
                 returnValueString = StringsFileR.Sphere;
             }
+            CenterAlignText(returnValueString, StringsViewMenu.OnlyEquals);
+            
             return returnValueString;
         }
         public static string CenterAlignText(this string s, string other)
         {
+            int position = (s.Length / 2) + 18;
 
+            string.Format("{0}{1, position}", other, s);
         }
     }
 }

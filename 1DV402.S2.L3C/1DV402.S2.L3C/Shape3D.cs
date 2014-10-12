@@ -28,7 +28,6 @@ namespace _1DV402.S2.L3C
         public abstract double MantelArea { get; }
         public abstract double TotalSurFaceArea { get; }
         public abstract double Volume { get; }
-        // mycket osäker på denna method
         public int CompareTo(object obj)
         {
             int result;
@@ -52,7 +51,7 @@ namespace _1DV402.S2.L3C
         }
         public override string ToString()
         {
-            return string.Format("{0}{1}:{2}{3}:{4}{5}:{6}{7}:{8}{9}:{10}{11}", StringsFileR.Length, _baseShape.Length, StringsFileR.Width, _baseShape.Width, StringsFileR.Circuit, _baseShape.Perimeter, StringsFileR.Area, _baseShape.area, StringsFileR.MantelArea, MantelArea, StringsFileR.TotalSurFaceArea, TotalSurFaceArea, StringsFileR.Volume, Volume);
+            return string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}:{8:}{9}:{10}:{11}", StringsFileR.Length, _baseShape.Length, StringsFileR.Width, _baseShape.Width, StringsFileR.Circuit, _baseShape.Perimeter, StringsFileR.Area, _baseShape.area, StringsFileR.MantelArea, MantelArea, StringsFileR.TotalSurFaceArea, TotalSurFaceArea, StringsFileR.Volume, Volume);
         }
         public override string ToString(string format)
         {
@@ -64,7 +63,7 @@ namespace _1DV402.S2.L3C
             if (format == "R")
             {
                 // skriv in samma som ovan fast med endast beskrivning av vilket objekt det är.
-                return string.Format("{0}{1}{2}{3}{4}{5}{6}", ShapeType, _baseShape.Length, _baseShape.Width, Height, MantelArea, TotalSurFaceArea, Volume);
+                return string.Format("{0}{1, 16:f1}{2, 22:f1}{3, 28:f1}{4, 41:f1}{5, 54:f1}{6, 67:f1}", ShapeType, _baseShape.Length, _baseShape.Width, Height, MantelArea, TotalSurFaceArea, Volume);
             }
             throw new FormatException("fel format på parametern till tostring");
         }

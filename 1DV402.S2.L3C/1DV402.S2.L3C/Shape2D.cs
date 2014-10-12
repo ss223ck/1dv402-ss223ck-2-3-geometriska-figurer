@@ -36,7 +36,6 @@ namespace _1DV402.S2.L3C
                 _width = value;
             }
         }
-        // mycket osäker på denna method
         public int CompareTo(object obj)
         {
             int results;
@@ -60,19 +59,19 @@ namespace _1DV402.S2.L3C
         }
         public override string ToString()
         {
-            return string.Format("{0}{1}:{2}{3}:{4}{5}:{6}{7}", StringsFileR.Length, Length, StringsFileR.Width, Width, StringsFileR.Circuit, Perimeter, StringsFileR.Area, Area);
+            return string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}", StringsFileR.Length, Length, StringsFileR.Width, Width, StringsFileR.Circuit, Perimeter, StringsFileR.Area, Area);
         }
         public override string ToString(string format)
         {
             if (format == "G" || format == null || format == "")
             {
                 //returnera 
-                return string.Format("{0}{1}:{2}{3}:{4}{5}:{6}{7}", StringsFileR.Length, Length, StringsFileR.Width, Width, StringsFileR.Circuit, Perimeter, StringsFileR.Area, Area);
+                return string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}", StringsFileR.Length, Length, StringsFileR.Width, Width, StringsFileR.Circuit, Perimeter, StringsFileR.Area, Area);
             }
             if (format == "R")
             {
                 // skriv in samma som ovan fast med endast beskrivning av vilket objekt det är.
-                return string.Format("{0}{1}{2}{3}{4}{5}{6}", ShapeType, Length, Width, Perimeter, Area);
+                return string.Format("{0}{1, 16:f1}{2, 22:f1}{3, 30:f1}{4, 38:f1}", ShapeType, Length, Width, Perimeter, Area);
             }
             throw new FormatException("fel format på parametern till tostring");
         }

@@ -97,6 +97,33 @@ namespace _1DV402.S2.L3C {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to -------------------------------------------------------------------.
+        /// </summary>
+        internal static string FrameMinus {
+            get {
+                return ResourceManager.GetString("FrameMinus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ------------------------------------.
+        /// </summary>
+        internal static string FrameMinusTwo {
+            get {
+                return ResourceManager.GetString("FrameMinusTwo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Figur      Längd Bredd  Höjd   Mantelarea Begräns.area        Volym.
+        /// </summary>
+        internal static string FrameSpecifiedTwo {
+            get {
+                return ResourceManager.GetString("FrameSpecifiedTwo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to =====================================.
         /// </summary>
         internal static string FramOfEquals {
@@ -106,11 +133,29 @@ namespace _1DV402.S2.L3C {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Figur      Längd Bredd  Höjd    Area.
+        /// </summary>
+        internal static string FramSpecifiedOne {
+            get {
+                return ResourceManager.GetString("FramSpecifiedOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to =              Detaljer             =.
+        /// </summary>
+        internal static string MiddleFrameDetails {
+            get {
+                return ResourceManager.GetString("MiddleFrameDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to =         Geometriska figurer       =.
         /// </summary>
-        internal static string MiddleFramOfEquals {
+        internal static string MiddleFrameGeometriska {
             get {
-                return ResourceManager.GetString("MiddleFramOfEquals", resourceCulture);
+                return ResourceManager.GetString("MiddleFrameGeometriska", resourceCulture);
             }
         }
         

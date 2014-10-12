@@ -122,7 +122,7 @@ namespace _1DV402.S2.L3C
                     }
                     else
                     {
-                        Console.WriteLine(StringsFileR.ErrorMessageDimensions_Prompt);
+                        ViewMenuErrorMessage();
                     }
                 }
                 else
@@ -139,7 +139,7 @@ namespace _1DV402.S2.L3C
                         else
                         {
                             checkInValue = true;
-                            Console.WriteLine(StringsFileR.ErrorMessageDimensions_Prompt);
+                            ViewMenuErrorMessage();
                         }
                         i++;
                     }
@@ -152,7 +152,7 @@ namespace _1DV402.S2.L3C
             Console.BackgroundColor = ConsoleColor.DarkRed;
             Console.WriteLine(StringsViewMenu.FramOfEquals);
             Console.WriteLine(StringsViewMenu.OnlyEquals);
-            Console.WriteLine(StringsViewMenu.MiddleFramOfEquals);
+            Console.WriteLine(StringsViewMenu.MiddleFrameGeometriska);
             Console.WriteLine(StringsViewMenu.OnlyEquals);
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine();
@@ -172,15 +172,77 @@ namespace _1DV402.S2.L3C
         }
         private static void ViewMenuErrorMessage()
         {
-
+            Console.WriteLine(StringsFileR.ErrorMessageDimensions_Prompt);
         }
         private static void ViewShapeDetail(Shape shape)
         {
+            string[] arraySplittedString;
+            string objectValues;
+            string colon = ":";
 
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine(StringsViewMenu.FramOfEquals);
+            Console.WriteLine(StringsViewMenu.OnlyEquals);
+            Console.WriteLine(StringsViewMenu.MiddleFrameDetails);
+            Console.WriteLine(StringsViewMenu.OnlyEquals);
+            Console.BackgroundColor = ConsoleColor.Black;
+
+            objectValues = shape.ToString();
+            arraySplittedString = objectValues.Split(':');
+
+            int i = 0;
+            do
+            {
+                Console.WriteLine(string.Format("{0}{1}{2}", arraySplittedString[i], colon, arraySplittedString[i+1]));
+                i =+ 2;
+            } while(i < arraySplittedString.Length);
+            Console.WriteLine();
+            Console.WriteLine(StringsViewMenu.OnlyEquals);
+            Console.WriteLine();
         }
         private static void ViewShapes(Shape[] shapes)
         {
+            string[] arraySplittedString = new string[0];
 
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine(StringsViewMenu.FrameMinus);
+            Console.WriteLine(StringsViewMenu.MiddleFrameDetails);
+            Console.WriteLine(StringsViewMenu.FrameMinus);
+            Console.BackgroundColor = ConsoleColor.Black;
+
+            int i = 0;
+            foreach (Shape s in shapes)
+            {
+                arraySplittedString[i] = s.ToString("R");
+                i++;
+            }
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            //if statement to see what to write in the console
+            if (shapes[0].IsShape3D)
+            {
+                Console.WriteLine(StringsViewMenu.FrameMinus);
+                Console.WriteLine(StringsViewMenu.FrameSpecifiedTwo);
+                Console.WriteLine(StringsViewMenu.FrameMinus);
+                Console.BackgroundColor = ConsoleColor.Black;
+                foreach (string s in arraySplittedString)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+            else
+            {
+                Console.WriteLine(StringsViewMenu.FrameMinusTwo);
+                Console.WriteLine(StringsViewMenu.FramSpecifiedOne);
+                Console.WriteLine(StringsViewMenu.FrameMinusTwo);
+                Console.BackgroundColor = ConsoleColor.Black;
+                foreach (string s in arraySplittedString)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine(StringsViewMenu.OnlyEquals);
+            Console.WriteLine();
         }
     }
 }
