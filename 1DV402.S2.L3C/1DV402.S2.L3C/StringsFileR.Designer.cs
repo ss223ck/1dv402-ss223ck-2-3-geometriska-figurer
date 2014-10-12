@@ -70,11 +70,74 @@ namespace _1DV402.S2.L3C {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cirkel.
+        /// </summary>
+        internal static string Circle {
+            get {
+                return ResourceManager.GetString("Circle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ange figurens diameter:.
+        /// </summary>
+        internal static string Circle_Propmt {
+            get {
+                return ResourceManager.GetString("Circle_Propmt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Omkrets.
         /// </summary>
         internal static string Circuit {
             get {
                 return ResourceManager.GetString("Circuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rätblock.
+        /// </summary>
+        internal static string Cuboid {
+            get {
+                return ResourceManager.GetString("Cuboid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cylinder.
+        /// </summary>
+        internal static string Cylinder {
+            get {
+                return ResourceManager.GetString("Cylinder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ellipse.
+        /// </summary>
+        internal static string Ellipse {
+            get {
+                return ResourceManager.GetString("Ellipse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FEL! Ett fel har inträffat då figurens dimensioner tolkades..
+        /// </summary>
+        internal static string ErrorMessageDimensions_Prompt {
+            get {
+                return ResourceManager.GetString("ErrorMessageDimensions_Prompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to =====================================.
+        /// </summary>
+        internal static string FrameEqual {
+            get {
+                return ResourceManager.GetString("FrameEqual", resourceCulture);
             }
         }
         
@@ -88,11 +151,56 @@ namespace _1DV402.S2.L3C {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ange figurens längd och bredd:.
+        /// </summary>
+        internal static string LengthNWidth_Prompt {
+            get {
+                return ResourceManager.GetString("LengthNWidth_Prompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ange figurens längd, bredd och höjd:.
+        /// </summary>
+        internal static string LengthWidthNHeight_Prompt {
+            get {
+                return ResourceManager.GetString("LengthWidthNHeight_Prompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mantelarea.
         /// </summary>
         internal static string MantelArea {
             get {
                 return ResourceManager.GetString("MantelArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rektangel.
+        /// </summary>
+        internal static string Rektangle {
+            get {
+                return ResourceManager.GetString("Rektangle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sfär.
+        /// </summary>
+        internal static string Sphere {
+            get {
+                return ResourceManager.GetString("Sphere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ange figurens radie:.
+        /// </summary>
+        internal static string Sphere_Prompt {
+            get {
+                return ResourceManager.GetString("Sphere_Prompt", resourceCulture);
             }
         }
         

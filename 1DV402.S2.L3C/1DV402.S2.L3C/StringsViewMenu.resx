@@ -117,61 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Area" xml:space="preserve">
-    <value>Area</value>
+  <data name="Circle_Prompt" xml:space="preserve">
+    <value>2. Cirkel.</value>
   </data>
-  <data name="Circle" xml:space="preserve">
-    <value>Cirkel</value>
+  <data name="Cuboid_Prompt" xml:space="preserve">
+    <value>4. Rätblock.</value>
   </data>
-  <data name="Circle_Propmt" xml:space="preserve">
-    <value>Ange figurens diameter:</value>
+  <data name="Cylinder_Prompt" xml:space="preserve">
+    <value>5. Cylinder.</value>
   </data>
-  <data name="Circuit" xml:space="preserve">
-    <value>Omkrets</value>
+  <data name="Ellipse_Prompt" xml:space="preserve">
+    <value>3. Ellipse.</value>
   </data>
-  <data name="Cuboid" xml:space="preserve">
-    <value>Rätblock</value>
-  </data>
-  <data name="Cylinder" xml:space="preserve">
-    <value>Cylinder</value>
-  </data>
-  <data name="Ellipse" xml:space="preserve">
-    <value>Ellipse</value>
-  </data>
-  <data name="ErrorMessageDimensions_Prompt" xml:space="preserve">
-    <value>FEL! Ett fel har inträffat då figurens dimensioner tolkades.</value>
-  </data>
-  <data name="FrameEqual" xml:space="preserve">
+  <data name="FramOfEquals" xml:space="preserve">
     <value>=====================================</value>
   </data>
-  <data name="Length" xml:space="preserve">
-    <value>Längd</value>
+  <data name="MiddleFramOfEquals" xml:space="preserve">
+    <value>=         Geometriska figurer       =</value>
   </data>
-  <data name="LengthNWidth_Prompt" xml:space="preserve">
-    <value>Ange figurens längd och bredd:</value>
+  <data name="OnlyEquals" xml:space="preserve">
+    <value>=                                   =</value>
   </data>
-  <data name="LengthWidthNHeight_Prompt" xml:space="preserve">
-    <value>Ange figurens längd, bredd och höjd:</value>
+  <data name="Quit_Prompt" xml:space="preserve">
+    <value>0. Avsluta.</value>
   </data>
-  <data name="MantelArea" xml:space="preserve">
-    <value>Mantelarea</value>
+  <data name="Random2D_Prompt" xml:space="preserve">
+    <value>7. Slumpa 2D-figurer.</value>
   </data>
-  <data name="Rektangle" xml:space="preserve">
-    <value>Rektangel</value>
+  <data name="Random3D_Prompt" xml:space="preserve">
+    <value>8. Slumpa 3d-figurer.</value>
   </data>
-  <data name="Sphere" xml:space="preserve">
-    <value>Sfär</value>
+  <data name="ReadNumber_Prompt" xml:space="preserve">
+    <value>Ange menyval [0-8]:</value>
+  </data>
+  <data name="Rektangle_Prompt" xml:space="preserve">
+    <value>1. Rektangel.</value>
   </data>
   <data name="Sphere_Prompt" xml:space="preserve">
-    <value>Ange figurens radie:</value>
-  </data>
-  <data name="TotalSurFaceArea" xml:space="preserve">
-    <value>Begränsningsarea</value>
-  </data>
-  <data name="Volume" xml:space="preserve">
-    <value>volym</value>
-  </data>
-  <data name="Width" xml:space="preserve">
-    <value>Bredd</value>
+    <value>6. Sphere</value>
   </data>
 </root>
