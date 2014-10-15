@@ -50,43 +50,51 @@ namespace _1DV402.S2.L3C
             do
             {
                 ViewMenu();
-                switch (Console.ReadLine())
+                recievedValue = Console.ReadLine();
+                if (recievedValue == "0" || recievedValue == "1" || recievedValue == "2" || recievedValue == "3" || recievedValue == "4" || recievedValue == "5" || recievedValue == "6" || recievedValue == "7" || recievedValue == "8" ||)
                 {
-                    case "0":
-                        return;
-                    case "1":
-                        ViewShapeDetail(CreateShape(ShapeType.Rectangle));
-                        break;
-                    case "2":
-                        ViewShapeDetail(CreateShape(ShapeType.Circle));
-                        break;
-                    case "3":
-                        ViewShapeDetail(CreateShape(ShapeType.Ellipse));
-                        break;
-                    case "4":
-                        ViewShapeDetail(CreateShape(ShapeType.Cuboid));
-                        break;
-                    case "5":
-                        ViewShapeDetail(CreateShape(ShapeType.Cylinder));
-                        break;
-                    case "6":
-                        ViewShapeDetail(CreateShape(ShapeType.Sphere));
-                        break;
-                    case "7":
-                        ViewShapes(Randomize2DShapes());
-                        break;
-                    case "8":
-                        ViewShapes(Randomize3DShapes());
-                        break;
-                    default: 
-                        Console.WriteLine(StringsFileR.ErrorMessageNumberWrong_Prompt);
-                        Console.BackgroundColor = ConsoleColor.Blue;
-                        Console.WriteLine(StringsFileR.Continue_Prompt);
-                        Console.ReadKey();
-                        Console.Clear();
-                        Console.BackgroundColor = ConsoleColor.Black;
-                        break;
+                    valueConverted = int.Parse(recievedValue);
+                    switch (valueConverted)
+                    {
+                        case 0:
+                            return;
+                        case 1:
+                            ViewShapeDetail(CreateShape(ShapeType.Rectangle));
+                            break;
+                        case 2:
+                            ViewShapeDetail(CreateShape(ShapeType.Circle));
+                            break;
+                        case 3:
+                            ViewShapeDetail(CreateShape(ShapeType.Ellipse));
+                            break;
+                        case 4:
+                            ViewShapeDetail(CreateShape(ShapeType.Cuboid));
+                            break;
+                        case 5:
+                            ViewShapeDetail(CreateShape(ShapeType.Cylinder));
+                            break;
+                        case 6:
+                            ViewShapeDetail(CreateShape(ShapeType.Sphere));
+                            break;
+                        case 7:
+                            ViewShapes(Randomize2DShapes());
+                            break;
+                        case 8:
+                            ViewShapes(Randomize3DShapes());
+                            break;
+                    }
                 }
+                else
+                {
+                Console.WriteLine(StringsFileR.ErrorMessageNumberWrong_Prompt);
+                Console.BackgroundColor = ConsoleColor.Blue;
+                Console.WriteLine(StringsFileR.Continue_Prompt);
+                Console.ReadKey();
+                Console.Clear();
+                Console.BackgroundColor = ConsoleColor.Black;
+                break;
+                }
+                
             } while (true);
         }
         private static Shape2D[] Randomize2DShapes()

@@ -38,6 +38,8 @@ namespace _1DV402.S2.L3C
         }
         public int CompareTo(object obj)
         {
+            int results;
+            Shape2D objShaped2D = obj as Shape2D;
             if (obj == null)
             {
                 return 1;
@@ -46,8 +48,8 @@ namespace _1DV402.S2.L3C
             {
                 throw new ArgumentException("parametern i CompareTo är inte av typen Shape2D");
             }
-            Shape2D objShaped2D = obj as Shape2D;
-            return Area.CompareTo(objShaped2D.Area);
+            results = Area.CompareTo(objShaped2D.Area);
+            return results;
         }
         protected Shape2D(ShapeType shapeType, double length, double width)
         : base(shapeType)

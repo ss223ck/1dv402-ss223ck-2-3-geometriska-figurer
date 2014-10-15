@@ -30,6 +30,8 @@ namespace _1DV402.S2.L3C
         public abstract double Volume { get; }
         public int CompareTo(object obj)
         {
+            int result;
+            Shape3D objShape3D = obj as Shape3D;
             if (obj == null)
             {
                 return 1;
@@ -39,8 +41,8 @@ namespace _1DV402.S2.L3C
             {
                 throw new ArgumentException("parametern i CompareTo är inte av typen Shape3D");
             }
-            Shape3D objShape3D = obj as Shape3D;
-            return Volume.CompareTo(objShape3D.Volume);
+            result = Volume.CompareTo(objShape3D.Volume);
+            return result;
         }
         protected Shape3D(ShapeType shapeType, Shape2D baseShape, double height) : base(shapeType)
         {
