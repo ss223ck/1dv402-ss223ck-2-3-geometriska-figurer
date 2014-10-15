@@ -38,8 +38,6 @@ namespace _1DV402.S2.L3C
         }
         public int CompareTo(object obj)
         {
-            int results;
-            Shape2D objShaped2D = obj as Shape2D;
             if (obj == null)
             {
                 return 1;
@@ -48,8 +46,8 @@ namespace _1DV402.S2.L3C
             {
                 throw new ArgumentException("parametern i CompareTo är inte av typen Shape2D");
             }
-            results = Area.CompareTo(objShaped2D.Area);
-            return results;
+            Shape2D objShaped2D = obj as Shape2D;
+            return Area.CompareTo(objShaped2D.Area);
         }
         protected Shape2D(ShapeType shapeType, double length, double width)
         : base(shapeType)
@@ -59,19 +57,28 @@ namespace _1DV402.S2.L3C
         }
         public override string ToString()
         {
-            return string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}", StringsFileR.Length, Length, StringsFileR.Width, Width, StringsFileR.Circuit, Perimeter, StringsFileR.Area, Area);
+            return ToString("G");
         }
         public override string ToString(string format)
         {
             if (format == "G" || format == null || format == "")
             {
-                //returnera 
-                return string.Format("{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}", StringsFileR.Length, Length, StringsFileR.Width, Width, StringsFileR.Circuit, Perimeter, StringsFileR.Area, Area);
+                return string.Format("{0}:{1:f1}:{2}:{3:f1}:{4}:{5:f1}:{6}:{7:f1}", StringsFileR.Length, Length, StringsFileR.Width, Width, StringsFileR.Circuit, Perimeter, StringsFileR.Area, Area);
             }
             if (format == "R")
             {
-                // skriv in samma som ovan fast med endast beskrivning av vilket objekt det är.
-                return string.Format("{0}{1, 16:f1}{2, 22:f1}{3, 30:f1}{4, 38:f1}", ShapeType, Length, Width, Perimeter, Area);
+                if (ShapeType == L3C.ShapeType.Ellipse)
+                {
+                    return string.Format("{0}{1, 9:f1}{2, 6:f1}{3, 9:f1}{4, 8:f1}", ShapeType, Length, Width, Perimeter, Area);
+                }
+                else if(ShapeType == L3C.ShapeType.Rectangle)
+                {
+                    return string.Format("{0}{1, 7:f1}{2, 6:f1}{3, 9:f1}{4, 8:f1}", ShapeType, Length, Width, Perimeter, Area);
+                }
+                else
+                {
+                    return string.Format("{0}{1, 10:f1}{2, 6:f1}{3, 9:f1}{4, 8:f1}", ShapeType, Length, Width, Perimeter, Area);
+                }
             }
             throw new FormatException("fel format på parametern till tostring");
         }

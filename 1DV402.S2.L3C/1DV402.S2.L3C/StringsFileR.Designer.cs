@@ -97,6 +97,15 @@ namespace _1DV402.S2.L3C {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tryck tangent för att fortsätta..
+        /// </summary>
+        internal static string Continue_Prompt {
+            get {
+                return ResourceManager.GetString("Continue_Prompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rätblock.
         /// </summary>
         internal static string Cuboid {
@@ -133,11 +142,29 @@ namespace _1DV402.S2.L3C {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to FEL! Det angivna värdet ligger inte i det slutna intervallet mellan 0 och 8..
+        /// </summary>
+        internal static string ErrorMessageNumberWrong_Prompt {
+            get {
+                return ResourceManager.GetString("ErrorMessageNumberWrong_Prompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to =====================================.
         /// </summary>
         internal static string FrameEqual {
             get {
                 return ResourceManager.GetString("FrameEqual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Höjd.
+        /// </summary>
+        internal static string Heigth {
+            get {
+                return ResourceManager.GetString("Heigth", resourceCulture);
             }
         }
         

@@ -133,7 +133,7 @@
     <value>-------------------------------------------------------------------</value>
   </data>
   <data name="FrameMinusTwo" xml:space="preserve">
-    <value>------------------------------------</value>
+    <value>---------------------------------------</value>
   </data>
   <data name="FrameSpecifiedTwo" xml:space="preserve">
     <value>Figur      Längd Bredd  Höjd   Mantelarea Begräns.area        Volym</value>
@@ -142,7 +142,7 @@
     <value>=====================================</value>
   </data>
   <data name="FramSpecifiedOne" xml:space="preserve">
-    <value>Figur      Längd Bredd  Höjd    Area</value>
+    <value>Figur      Längd Bredd  Omkrets    Area</value>
   </data>
   <data name="MiddleFrameDetails" xml:space="preserve">
     <value>=              Detaljer             =</value>
@@ -170,5 +170,8 @@
   </data>
   <data name="Sphere_Prompt" xml:space="preserve">
     <value>6. Sphere</value>
+  </data>
+  <data name="EqualsFormat" xml:space="preserve">
+    <value>={0}=</value>
   </data>
 </root>

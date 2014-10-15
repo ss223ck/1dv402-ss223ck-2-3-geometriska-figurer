@@ -12,14 +12,9 @@ namespace _1DV402.S2.L3C
         public bool IsShape3D
         {
             get { 
-                if (this.ShapeType == ShapeType.Cuboid || this.ShapeType == ShapeType.Cylinder || this.ShapeType == ShapeType.Sphere)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return this.ShapeType == ShapeType.Cuboid || 
+                    this.ShapeType == ShapeType.Cylinder || 
+                    this.ShapeType == ShapeType.Sphere;
             }
         }
         public ShapeType ShapeType { get; private set; }

@@ -129,6 +129,9 @@
   <data name="Circuit" xml:space="preserve">
     <value>Omkrets</value>
   </data>
+  <data name="Continue_Prompt" xml:space="preserve">
+    <value>Tryck tangent för att fortsätta.</value>
+  </data>
   <data name="Cuboid" xml:space="preserve">
     <value>Rätblock</value>
   </data>
@@ -141,8 +144,14 @@
   <data name="ErrorMessageDimensions_Prompt" xml:space="preserve">
     <value>FEL! Ett fel har inträffat då figurens dimensioner tolkades.</value>
   </data>
+  <data name="ErrorMessageNumberWrong_Prompt" xml:space="preserve">
+    <value>FEL! Det angivna värdet ligger inte i det slutna intervallet mellan 0 och 8.</value>
+  </data>
   <data name="FrameEqual" xml:space="preserve">
     <value>=====================================</value>
+  </data>
+  <data name="Heigth" xml:space="preserve">
+    <value>Höjd</value>
   </data>
   <data name="Length" xml:space="preserve">
     <value>Längd</value>

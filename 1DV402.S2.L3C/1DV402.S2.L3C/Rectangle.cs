@@ -8,7 +8,7 @@ namespace _1DV402.S2.L3C
 {
     class Rectangle : Shape2D
     {
-        public override double area
+        public override double Area
         {
             get { return (Length * Width); }
         }

@@ -97,6 +97,15 @@ namespace _1DV402.S2.L3C {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ={0}=.
+        /// </summary>
+        internal static string EqualsFormat {
+            get {
+                return ResourceManager.GetString("EqualsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -------------------------------------------------------------------.
         /// </summary>
         internal static string FrameMinus {
@@ -106,7 +115,7 @@ namespace _1DV402.S2.L3C {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ------------------------------------.
+        ///   Looks up a localized string similar to ---------------------------------------.
         /// </summary>
         internal static string FrameMinusTwo {
             get {
@@ -133,7 +142,7 @@ namespace _1DV402.S2.L3C {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Figur      Längd Bredd  Höjd    Area.
+        ///   Looks up a localized string similar to Figur      Längd Bredd  Omkrets    Area.
         /// </summary>
         internal static string FramSpecifiedOne {
             get {

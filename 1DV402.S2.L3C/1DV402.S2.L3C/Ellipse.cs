@@ -8,9 +8,9 @@ namespace _1DV402.S2.L3C
 {
     class Ellipse : Shape2D
     {
-        public override double area
+        public override double Area
         {
-            get { { return (Math.PI * Length * Width); } }
+            get { return (Math.PI * Length * Width); }
         }
         public override double Perimeter
         {

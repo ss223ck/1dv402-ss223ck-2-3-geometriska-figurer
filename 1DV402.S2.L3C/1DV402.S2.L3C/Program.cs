@@ -10,16 +10,84 @@ namespace _1DV402.S2.L3C
     {
         private static Shape CreateShape(ShapeType shapeType)
         {
-            // skapa objekt och retunera referensen, 
-            // AsText ska översätta ShapeTypeEnum till text så kalla på den
-            //CenterAligne sätter texten i mitten för Utskriften
+            double[] ReturnArray;
+            string shapeName = shapeType.AsText();
+
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine(StringsFileR.FrameEqual);
+            Console.WriteLine(shapeName.CenterAlignText(StringsViewMenu.EqualsFormat));
+            Console.WriteLine(StringsFileR.FrameEqual);
+            Console.BackgroundColor = ConsoleColor.Black;
+
+            ReturnArray = ReadDimensions(shapeType);
+            if (shapeType == ShapeType.Circle)
+            {
+                return new Ellipse(ReturnArray[0]);
+            }
+            else if (shapeType == ShapeType.Rectangle)
+            {
+                return new Rectangle(ReturnArray[0], ReturnArray[1]);
+            }
+            else if (shapeType == ShapeType.Cuboid)
+            {
+                return new Cuboid(ReturnArray[0], ReturnArray[1], ReturnArray[2]);
+            }
+            else if (shapeType == ShapeType.Cylinder)
+            {
+                return new Cylinder(ReturnArray[0], ReturnArray[1], ReturnArray[2]);
+            }
+            else if (shapeType == ShapeType.Ellipse)
+            {
+                return new Ellipse(ReturnArray[0], ReturnArray[1]);
+            }
+            return new Sphere(ReturnArray[0]);
         }
         static void Main(string[] args)
         {
-            ViewMenu();
-            // väljer användare att skapa objekt ska CreateShape kallas
-            //skicka med vilken form av objekt som ska göras för att sedan skickas med viewShapeDetail
-            ViewShapeDetail(CreateShape());
+            string recievedValue;
+            int valueConverted;
+
+            do
+            {
+                ViewMenu();
+                switch (Console.ReadLine())
+                {
+                    case "0":
+                        return;
+                    case "1":
+                        ViewShapeDetail(CreateShape(ShapeType.Rectangle));
+                        break;
+                    case "2":
+                        ViewShapeDetail(CreateShape(ShapeType.Circle));
+                        break;
+                    case "3":
+                        ViewShapeDetail(CreateShape(ShapeType.Ellipse));
+                        break;
+                    case "4":
+                        ViewShapeDetail(CreateShape(ShapeType.Cuboid));
+                        break;
+                    case "5":
+                        ViewShapeDetail(CreateShape(ShapeType.Cylinder));
+                        break;
+                    case "6":
+                        ViewShapeDetail(CreateShape(ShapeType.Sphere));
+                        break;
+                    case "7":
+                        ViewShapes(Randomize2DShapes());
+                        break;
+                    case "8":
+                        ViewShapes(Randomize3DShapes());
+                        break;
+                    default: 
+                        Console.WriteLine(StringsFileR.ErrorMessageNumberWrong_Prompt);
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                        Console.WriteLine(StringsFileR.Continue_Prompt);
+                        Console.ReadKey();
+                        Console.Clear();
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        break;
+                }
+            } while (true);
         }
         private static Shape2D[] Randomize2DShapes()
         {
@@ -29,9 +97,9 @@ namespace _1DV402.S2.L3C
 
             for (int i = 0; i < numberOfFiguers; i++)
             {
-                int randomShape = randomInstance.Next(0, 4);
-                double length = (randomInstance.NextDouble() * (100 - 5) + 5);
-                double width = (randomInstance.NextDouble() * (100 - 5) + 5);
+                int randomShape = randomInstance.Next(0, 3);
+                double length = (randomInstance.NextDouble() * (99 - 5) + 5);
+                double width = (randomInstance.NextDouble() * (99 - 5) + 5);
                 switch (randomShape)
                 {
                     case 0:
@@ -56,9 +124,9 @@ namespace _1DV402.S2.L3C
             for (int i = 0; i < numberOfFiguers; i++)
             {
                 int randomShape = randomInstance.Next(3, 6);
-                double height = (randomInstance.NextDouble() * (100 - 5) + 5);
-                double length = (randomInstance.NextDouble() * (100 - 5) + 5);
-                double width = (randomInstance.NextDouble() * (100 - 5) + 5);
+                double height = (randomInstance.NextDouble() * (99 - 5) + 5);
+                double length = (randomInstance.NextDouble() * (99 - 5) + 5);
+                double width = (randomInstance.NextDouble() * (99 - 5) + 5);
                 switch (randomShape)
                 {
                     case 3:
@@ -77,7 +145,7 @@ namespace _1DV402.S2.L3C
         private static double[] ReadDimensions(ShapeType shapeType)
         {
             double[] returnArrayDimensions = new double[1];
-            
+
             if (shapeType == ShapeType.Circle || shapeType == ShapeType.Sphere)
             {
                 //Code for reading one value
@@ -154,6 +222,7 @@ namespace _1DV402.S2.L3C
             Console.WriteLine(StringsViewMenu.OnlyEquals);
             Console.WriteLine(StringsViewMenu.MiddleFrameGeometriska);
             Console.WriteLine(StringsViewMenu.OnlyEquals);
+            Console.WriteLine(StringsViewMenu.FramOfEquals);
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine();
             Console.WriteLine(StringsViewMenu.Quit_Prompt);
@@ -185,6 +254,7 @@ namespace _1DV402.S2.L3C
             Console.WriteLine(StringsViewMenu.OnlyEquals);
             Console.WriteLine(StringsViewMenu.MiddleFrameDetails);
             Console.WriteLine(StringsViewMenu.OnlyEquals);
+            Console.WriteLine(StringsViewMenu.FramOfEquals);
             Console.BackgroundColor = ConsoleColor.Black;
 
             objectValues = shape.ToString();
@@ -193,22 +263,16 @@ namespace _1DV402.S2.L3C
             int i = 0;
             do
             {
-                Console.WriteLine(string.Format("{0}{1}{2}", arraySplittedString[i], colon, arraySplittedString[i+1]));
-                i =+ 2;
-            } while(i < arraySplittedString.Length);
+                Console.WriteLine(string.Format("{0}{1}{2}", arraySplittedString[i], colon, arraySplittedString[i + 1]));
+                i = i + 2;
+            } while (i < arraySplittedString.Length);
             Console.WriteLine();
             Console.WriteLine(StringsViewMenu.OnlyEquals);
             Console.WriteLine();
         }
         private static void ViewShapes(Shape[] shapes)
         {
-            string[] arraySplittedString = new string[0];
-
-            Console.BackgroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine(StringsViewMenu.FrameMinus);
-            Console.WriteLine(StringsViewMenu.MiddleFrameDetails);
-            Console.WriteLine(StringsViewMenu.FrameMinus);
-            Console.BackgroundColor = ConsoleColor.Black;
+            string[] arraySplittedString = new string[shapes.Length];
 
             int i = 0;
             foreach (Shape s in shapes)

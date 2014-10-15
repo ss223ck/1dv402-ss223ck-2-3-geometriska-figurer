@@ -35,15 +35,41 @@ namespace _1DV402.S2.L3C
             {
                 returnValueString = StringsFileR.Sphere;
             }
-            CenterAlignText(returnValueString, StringsViewMenu.OnlyEquals);
-            
             return returnValueString;
         }
         public static string CenterAlignText(this string s, string other)
         {
-            int position = (s.Length / 2) + 18;
-
-            string.Format("{0}{1, position}", other, s);
+            if (s == StringsFileR.Circle)
+            {
+                s = string.Format("               {0}              ", s);
+                return string.Format(other, s);
+            }
+            else if (s == StringsFileR.Cuboid)
+            {
+                s = string.Format("             {0}              ", s);
+                return string.Format(other, s);
+            }
+            else if (s == StringsFileR.Cylinder)
+            {
+                s = string.Format("             {0}              ", s);
+                return string.Format(other, s);
+            }
+            else if (s == StringsFileR.Ellipse)
+            {
+                s = string.Format("              {0}              ", s);
+                return string.Format(other, s);
+            }
+            else if (s == StringsFileR.Rektangle)
+            {
+                s = string.Format("              {0}            ", s);
+                return string.Format(other, s);
+            }
+            else if (s == StringsFileR.Sphere)
+            {
+                s = string.Format("                {0}               ", s);
+                return string.Format(other, s);
+            }
+            return other;
         }
     }
 }
