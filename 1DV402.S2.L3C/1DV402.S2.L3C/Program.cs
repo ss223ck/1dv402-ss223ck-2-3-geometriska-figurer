@@ -51,7 +51,7 @@ namespace _1DV402.S2.L3C
             {
                 ViewMenu();
                 recievedValue = Console.ReadLine();
-                if (recievedValue == "0" || recievedValue == "1" || recievedValue == "2" || recievedValue == "3" || recievedValue == "4" || recievedValue == "5" || recievedValue == "6" || recievedValue == "7" || recievedValue == "8" ||)
+                if (recievedValue == "0" || recievedValue == "1" || recievedValue == "2" || recievedValue == "3" || recievedValue == "4" || recievedValue == "5" || recievedValue == "6" || recievedValue == "7" || recievedValue == "8")
                 {
                     valueConverted = int.Parse(recievedValue);
                     switch (valueConverted)
